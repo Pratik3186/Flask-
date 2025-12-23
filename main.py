@@ -21,7 +21,7 @@ def about():
     which means it will be executed when the "/about" URL is accessed.
     It returns a brief description of the application.
     """
-    return "This Flask application demonstrates basic routing and view functions."
+    return "<html><H1>About This Application</H1><p>This Flask application demonstrates basic routing and view functions.</p></html>"
 
 if __name__ == "__main__":
     """
