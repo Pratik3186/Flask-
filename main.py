@@ -1,4 +1,4 @@
-from flask import Flask 
+from flask import Flask, render_template
 
 # It creates an instance of the flask class,
 # which acts as the WSGI application.
@@ -12,7 +12,8 @@ def welcome():
     which means it will be executed when the root URL ("/") is accessed.
     It returns a simple welcome message.
     """
-    return "Welcome to the Flask Application! This is the home page."
+    return "<html><H1>About This Application</H1><p>This Flask application demonstrates basic routing and view functions.</p></html>"
+
 
 @app.route("/about")
 def about():
@@ -21,7 +22,7 @@ def about():
     which means it will be executed when the "/about" URL is accessed.
     It returns a brief description of the application.
     """
-    return "<html><H1>About This Application</H1><p>This Flask application demonstrates basic routing and view functions.</p></html>"
+    return render_template("index.html")
 
 if __name__ == "__main__":
     """
